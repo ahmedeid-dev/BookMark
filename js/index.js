@@ -136,9 +136,9 @@ function addSite() {
         clearForm();
         updateButton.classList.add("d-none");
         submitButton.classList.remove("d-none");
+        siteNameInput.classList.remove("is-valid");
+        siteUrlInput.classList.remove("is-valid");
     }
-    siteNameInput.classList.remove("is-valid");
-    siteUrlInput.classList.remove("is-valid");
     }
     function onInputName() {
     if (nameRegex.test(siteNameInput.value) == true) {
