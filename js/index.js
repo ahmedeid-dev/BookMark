@@ -16,7 +16,8 @@ var urlRegex =/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{
     if (urlList.length == 0) {
     document.getElementById("deletaAllInputButton").classList.add("disabled");
     }
-    function addSite() {
+function addSite() {
+    // $('#exampleModal').modal('toggle');
     var site = {
         siteName: siteNameInput.value,
         siteUrl: siteUrlInput.value,
@@ -136,6 +137,8 @@ var urlRegex =/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{
         updateButton.classList.add("d-none");
         submitButton.classList.remove("d-none");
     }
+    siteNameInput.classList.remove("is-valid");
+    siteUrlInput.classList.remove("is-valid");
     }
     function onInputName() {
     if (nameRegex.test(siteNameInput.value) == true) {
@@ -162,4 +165,5 @@ var urlRegex =/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{
         urlAlert.classList.remove("d-none");
         return false;
     }
-    }
+}
+    
